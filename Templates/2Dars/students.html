@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Barcha Talabalar ro'yhati</title>
+</head>
+<body>
+    <br>
+    <br>
+    <hr>
+    <h1>Barcha Talabalar ro'yhati:</h1>
+    <hr>
+    <br>
+    <br>
+    <form method="get" action='/talabalar/'>
+        <input type="text" name="q_sozi" placeholder="Qidiruv so'zi...">
+        <button type="submit" >Qidirish</button>
+    </form>
+    <br>
+    <br>
+    {% for talaba in students %}
+        <h3 style="display:inline-block; margin-right:20px" >{{ talaba.id }}. {{ talaba }}</h3>
+    <a href="/talaba_ochir/{{talaba.id}}/"><button>O'chirish</button></a>
+    <br>
+    <br>
+    {% endfor %}
+    <br>
+    <br>
+    <form method="post" action="/talabalar/">{% csrf_token %}
+        <input type="text" name="name" placeholder="Ism">
+        <input type="text" name="gender" placeholder="Jins">
+        <input type="number" name="books" placeholder="Kitob soni">
+        <label for="">Bitiruvchi:</label>
+        <input type="checkbox" name="bt" >
+        <button type="submit">Qo'shish</button>
+    </form>
+</body>
+</html>

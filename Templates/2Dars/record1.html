@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recordlar</title>
+</head>
+<body>
+    <br>
+    <br>
+    <hr>
+    <h1>Hamma recordlarni chiqaruvchi sahifaga student ismi bo’yicha recordlarni qidirish</h1>
+    <hr>
+    <br>
+    <br>
+    <form method="get" action="/recordlar1/">
+        <input type="text" name="ism" placeholder="Ism bo'yicha qidirish ..." id="ism">
+        <button type="submit">Qidirish</button>
+    </form>
+    <br>
+    <br>
+    <h1>Barcha Recordlar</h1>
+    {% for record in recordlar %}
+        <h3>{{record.id}}. {{record}}</h3>
+    {% endfor %}
+</body>
+</html>

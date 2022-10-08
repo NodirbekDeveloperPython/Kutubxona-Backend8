@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salomlar</title>
+</head>
+<body>
+<br>
+<br>
+<hr>
+<h1>Salom {{ism}} !</h1>
+
+<h1>Hamma talabalar ro'yhati!</h1>
+
+<br>
+<br>
+<br><form method="get" action="/salom/">
+        <input type="text" name="q_sozi">
+        <button type="submit">Qidirish</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    {% for student in Studentlar %}
+    <h2 style="display:inline;">{{student.id}}. <a href="/talaba/{{student.id}}/">{{student}} </a></h2>
+    <a href="/talaba_ochir/{{student.id}}/"><button>O'chirish</button></a><br><br><br>
+    {% endfor %}
+
+</body>
+</html>

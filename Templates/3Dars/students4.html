@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body>
+    <br>
+    <br>
+    <hr>
+    <h1>Barcha talabalar ro'yhati:</h1>
+    <form action="/students/" method="get">
+        <input type="text" placeholder="Ism ..." name="q_sozi" id="">
+        <button type="submit">Searching</button>
+    </form>
+    <hr>
+    {% for student in students %}
+        <h3 style="display:inline-block; margin-right:20px">{{student.id}}. <a href="/talabaa/{{student.id}}">{{student}}</a></h3>
+    <a href="/student4_delete/{{student.id}}"><button type="submit">Delete</button></a> <br> <br>
+    {% endfor %}
+    <br>
+    <br>
+    <form action="/students/" method="post"> {% csrf_token %}
+        <input type="text" name="name" placeholder="Ism..." id="">
+        <select name="gender" id="">
+            <option value="Erkak">Erkak</option>
+            <option value="Ayol">Ayol</option>
+        </select>
+        <input type="number" name="books" placeholder="Kitob soni..." id="">
+        <label for="bt">Bitiruvchi</label>
+        <input type="checkbox" name="bt" id="bt">
+        <button type="submit">Qo'shish</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

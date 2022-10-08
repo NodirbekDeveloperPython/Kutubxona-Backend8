@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Record haqida batafsil</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <h1>Record haqida batafsil</h1>
+    <hr>
+    <br>
+    <h1> Kitob nomi: {{record.kitob.nom}}  </h1>
+    <h1>Kitobni olgan talaba: {{ record.student.ism }} </h1>
+    <h1>Kitobni olgan sanasi: {{ record.olingan_sana }} </h1>
+    {% if bool %}
+        <h3> Qaytargan sanasi: {{record.qaytargan_sana}} </h3>
+    {% endif %}
+    {% if not bool %}
+        <h3>Qaytagan sanasi: Kitobni hali qayatrmagan.</h3>
+    {% endif %}
+
+</body>
+</html>

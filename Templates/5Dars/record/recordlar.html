@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recordlar</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <h1>Recordlar:</h1>
+    <hr>
+    <br>
+    {% for record in recordlar %}
+            <h3>{{record.id}}. {{record}}</h3>
+    {% endfor %}
+    <br>
+    <form action="/barcha_recordlar_home/" method="post"> {% csrf_token %}
+        {{forma}}
+
+        <button type="submit">Qo'shish</button>
+    </form>
+    <br>
+</body>
+</html>

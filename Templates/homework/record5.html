@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recordlar</title>
+</head>
+<body>
+  <br>
+  <br>
+  <hr>
+  <h1>Recordlar ro'yhati:</h1>
+  <br>
+  <hr>
+    {% for record in recordlar %}
+    <h2> {{record.id}}. <a href="/record16/{{record.id}}/">{{record}}</a> </h2>
+    {% endfor %}
+
+</body>
+</html>

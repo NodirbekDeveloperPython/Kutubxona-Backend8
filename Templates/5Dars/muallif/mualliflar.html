@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mualliflar</title>
+</head>
+<body>
+    <br>
+    <hr>
+        <h3>Mualliflar:</h3>
+    <hr>
+    {% for muallif in mualliflar %}
+        <h3>{{muallif.id}}. <a href="/muallif_full/{{muallif.id}}/">{{muallif}}</a></h3>
+    <a href="/muallif_del_sure/{{muallif.id}}/"><button type="submit">O'chirish</button></a>
+    <a href="/muallif_edit/{{muallif.id}}/"><button type="submit">Tahrirlash</button></a>
+    {% endfor %}
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

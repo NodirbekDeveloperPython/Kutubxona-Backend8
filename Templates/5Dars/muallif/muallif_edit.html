@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muallif edit</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <br>
+    <h1>Muallifni tahrirlash:</h1>
+    <hr>
+    <br>
+    <form action="/barcha_mualliflar/" method="post"> {% csrf_token %}
+        <label for="ism">Ism:</label>
+        <input type="text" name="ism" value="{{muallif.ism}}" id="ism"> <br> <br>
+
+        <label for="tirik">Tirikligi:</label>
+        {% if muallif.tirik %}
+            <input type="checkbox" name="tirik" id="tirik" checked>
+        {% else %}
+            <input type="checkbox" name="tirik" id="tiri">
+        {% endif %} <br> <br>
+
+
+        <label for="k_soni">Kitob soni:</label>
+        <input type="number" name="k_soni" id="k_soni" value="{{muallif.kitob_soni}}"> <br> <br>
+
+        <label for="t_yil">Tug'ilgan yil:</label>
+        <input type="date" name="t_yil" id="t_yil" value="{{muallif.tugilgan_yil}}"> <br> <br>
+
+        <button type="submit">Tahrirlash</button>
+
+    </form>
+    <br>
+</body>
+</html>

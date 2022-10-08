@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitoblar</title>
+</head>
+<body>
+  <br>
+  <hr>
+  <h1>Kitoblar ro'yhati:</h1>
+  <hr>
+  <br>
+  {% for kitob in kitoblar %}
+        <h3 style="display:inline-block; margin-right:20px" >{{kitob.id}}. {{kitob}}</h3>
+  <a href="/kitoblar_tas1/{{kitob.id}}/"><button type="submit">Delete</button></a> <br>
+  {% endfor %}
+  <br>
+  <br>
+  <form action="" method="post"> {% csrf_token %}
+      {{forma.as_p}}
+      <button type="submit" >
+          Qo'shish
+      </button>
+  </form>
+  <br>
+  <br>
+</body>
+</html>

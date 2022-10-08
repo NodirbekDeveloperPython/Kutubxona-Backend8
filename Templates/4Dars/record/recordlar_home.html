@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recordlar</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <h1>Recordlar ro'yhati:</h1>
+    <hr>
+    {% for record in recordlar %}
+        <h3 style="display:inline-block">{{record.id}}. {{record}}</h3>
+    <a href="/record_home_delete/{{record.id}}/" style="display:inline-block; margin: 20px;"><button type="submit">Delete</button></a>
+    {% if record.qaytardi %}
+    {% else %}
+        <a href="/record_home_edit/{{record.id}}/"><button type="submit">Tahrirlash</button></a>
+    {% endif %}
+    <br>
+    {% endfor %}
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

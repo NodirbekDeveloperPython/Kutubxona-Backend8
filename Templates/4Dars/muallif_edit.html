@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muallif tahrirlash</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <h1>Muallif tahrirlash</h1>
+    <hr>
+    <form action="/muallif_edit/{{muallif.id}}" method="post"> {% csrf_token %}
+        <input placeholder="{{muallif.ism}}" type="text" name="" id="">
+    </form>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

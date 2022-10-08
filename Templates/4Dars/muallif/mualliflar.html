@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mualliflar</title>
+</head>
+<body>
+  <br>
+  <br>
+  <hr>
+  <h1>Mualliflar ro'yhati:</h1>
+  <hr>
+  <form action="/mualliflar_home1/" method="get">
+      <input placeholder="Ism ..." type="text" name="q_soz" id="">
+      <button type="submit">Qidirish</button>
+  </form>
+  <br>
+  {% for muallif in mualliflar %}
+      <h3 style="display: inline-block; margin-right:10px;">{{muallif.id}}. <a href="/mualliflar_home1_b/{{muallif.id}}/">{{muallif}}</a></h3>
+
+      <a href="/muallif_home_delete/{{muallif.id}}/" style="display:inline-block; margin-left:10px; margin-right:20px"><button type="submit">Delete</button></a>
+
+      <a href="/muallif_home_edit/{{muallif.id}}/"><button type="submit">Tahrirlash</button></a> <br>
+  {% endfor %}
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+</html>

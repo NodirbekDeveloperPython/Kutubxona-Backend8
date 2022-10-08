@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recordlar</title>
+</head>
+<body>
+    <br>
+    <br>
+    <hr>
+    <h1>Recordlar ro'yhati</h1>
+    <br>
+    <hr>
+    <br>
+    {% for record in recordlar %}
+        <h3 style="display:inline-block; margin-right:20px">{{record.id}}. {{record}}</h3>
+    <a href="/record_ochir3/{{record.id}}/"><button type="submit">Delete</button></a>
+    <br>
+    <br>
+    {% endfor %}
+    <br>
+</body>
+</html>

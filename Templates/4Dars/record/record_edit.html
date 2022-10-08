@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Record</title>
+</head>
+<body>
+  <br>
+  <hr>
+  <h1>Record o'zgartirish:</h1>
+  <hr>
+  <form action="" method="post">
+      <label for="bt">Qaytardi:</label>
+      {% if record.qaytardi %}
+          <input type="checkbox" checked  name="bt" id="bt">
+      {% else %}
+          <input type="checkbox" dirname="bt" name="" id="bt">
+      {% endif %}
+      <br>
+      <label for="sana">Qaytargan sana:</label>
+      <input type="text" name="sana" value="{{record.qaytargan_sana}}" id="sana">
+  </form>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+</html>

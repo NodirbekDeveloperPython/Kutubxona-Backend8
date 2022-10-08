@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mualliflar</title>
+</head>
+<body>
+    <br>
+    <hr>
+    <h1>Muallifni tahrirlash:</h1>
+    <hr>
+    <br>
+    <form action="/mualliflar_home1/" method="post"> {% csrf_token %}
+        <input type="text" name="ism" value="{{muallif.ism}}">
+        {% if muallif.tirik %}
+            <input type="checkbox" name="bt" checked>
+        {% else %}
+            <input type="checkbox" name="bt">
+        {% endif %}
+        <input type="text" name="k_soni" value="{{muallif.kitob_soni}}">
+        <input type="text" name="t_yil" value="{{muallif.tugilgan_yil}}">
+        <button type="submit">O'zgartirish</button>
+    </form>
+</body>
+</html>
